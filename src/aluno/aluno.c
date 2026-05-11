@@ -16,8 +16,12 @@ Aluno *criarAluno(char *nome, Data dataNascimento, char *curso, int ano, int num
         return NULL;
     }
 
-    strncpy(novo->nome, nome);
-    strncpy(novo->curso, curso);
+    strncpy(novo->nome, nome, TAM_NOME - 1);
+    novo->nome[TAM_NOME - 1] = '\0';
+    
+    strncpy(novo->curso, curso, TAM_CURSO - 1);
+    novo->curso[TAM_CURSO - 1] = '\0';
+
     novo->dataNascimento = dataNascimento;
     novo->ano = ano;
     novo->numero = numero;
