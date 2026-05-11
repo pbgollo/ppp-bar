@@ -12,4 +12,6 @@ typedef struct Despesa {
     struct Despesa *proximo;
 } Despesa;
 
+void libertarListaDespesas(Despesa **listaDespesas);
+
 #endif

@@ -18,4 +18,10 @@ typedef struct Aluno {
     struct Aluno *proximo;
 } Aluno;
 
+Aluno *criarAluno(char *nome, Data dataNascimento, char *curso, int ano, int numero, float saldoInicial);
+int inserirAlunoOrdenado(Aluno **lista, Aluno *novo);
+Aluno *procurarAlunoPorNumero(Aluno *lista, int numero);
+void listarAlunosOrdenados(Aluno *lista);
+int removerAlunoPorNumero(Aluno **lista, int numero);
+
 #endif
